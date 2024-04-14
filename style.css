@@ -394,6 +394,12 @@ footer .icon {
   cursor: pointer;
   transition: all 0.35s;
 }
+footer .icon strong a{
+  color: #e6e6e6;
+}
+footer .icon strong span{
+  color: #0075ff;
+}
 footer .icon:hover {
   scale: 1.1;
 }
