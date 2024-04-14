@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/ico.png" type="image/x-icon">
+    <title>FJL Bazar</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <ul>
+        <li class="select"><a href="#Home">Casa</a></li>
+        <li class=""><a href="#Aboutme">Nuestros Servicios</a></li>
+        <li><a href="#Proyects">¿Por qué elegirnos?</a></li>
+        <li><a href="#Contact">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <section id="Home">
+      <div class="title">
+        <img src="img/ico.png" alt="FJL BG" />
+        <!--<h1>FJL</h1>
+    <h2>Bazar Gastronómico</h2>
+-->
+      </div>
+      <p>Encuentra las herramientas perfectas para tu negocio de gastronomía</p>
+      <img src="img/mouse.png" alt="scoll" />
+    </section>
+
+    <section id="Aboutme">
+      <img src="img/chef-1.webp" alt="cocinero" />
+      <p>En <strong>FJL</strong>, entendemos las necesidades únicas de tu negocio gastronómico. Nuestro enfoque nos
+        permite ofrecerte atención personalizada para encontrar las soluciones ideales.</p>
+      <div>
+        <p>Una amplia gama de negocios gastronómicos confían</p>
+        <ul>
+          <li>Bares</li>
+          <li>Cervecerías</li>
+          <li>Pubs</li>
+          <li>Restobares</li>
+          <li>Hoteles</li>
+          <li>Servicios de Catering</li>
+          <li>Eventos</li>
+          <li>Institutos de Gastronomía</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="Proyects">
+      <img src="img/chef-2.png" alt="Cocina" />
+      <h2>¿Por qué elegirnos?</h2>
+      <ul>
+        <li>Experiencia: Con años de experiencia en la industria, conocemos los desafíos y las necesidades específicas.
+        </li>
+        <li>Atención Personalizada: Nos comprometemos a brindarte un servicio personalizado, adaptado a tus necesidades
+          únicas.</li>
+        <li>Planificación: Compras estratégicas adaptadas a tus necesidades de productos, precios y almacenamiento de
+          stock.</li>
+        <li>Servicio Integral: Brindamos un servicio completo, acompañando todo el proceso para optimizar los tiempos de
+          gestión.</li>
+        <li>Colaboración: Nuestra visión es ofrecer colaboración permanente y personal en cuestiones que muchas veces
+          exceden al negocio, presentando varias alternativas para que cuentes en tiempo y forma con lo requerido.</li>
+      </ul>
+    </section>
+    <section id="Contact">
+      <div class="container">
+        <p>¿Listo para encontrar las herramientas perfectas para tu negocio gastronómico?</p>
+        <p>¡Contáctanos hoy mismo!</p>
+        <aside>
+          <a target="_blank" href="tel:+541133552331" class="card">
+            <div class="title">
+              <p>Llama ahora</p>
+              <p>(+54) 9 11 3355-2331</p>
+            </div>
+            <div class="rrss"><img src="img/tel.png" alt="Llamar">
+            </div>
+          </a>
+          <a href="mailto:info@fjlbazar.com" class="card">
+            <div class="title">
+              <p>Escribinos</p>
+              <p>info@fjlbazar.com</p>
+            </div>
+            <div class="rrss"><img src="img/email.png" alt="Email">
+            </div>
+          </a>
+          <a href="http://wa.me/5491133552331" class="card">
+            <div class="title">
+              <p>Whatsapp</p>
+              <p>(+54) 9 11 3355-2331</p>
+            </div>
+            <div class="rrss"><img src="img/whatsapp.png" alt="Whatsapp">
+            </div>
+          </a>
+          <a href="https://www.instagram.com/fjl_bazar_gastronomico" class="card">
+            <div class="title">
+              <p>Seguinos</p>
+              <p>@fjl_bazar_gastronomico</p>
+            </div>
+            <div class="rrss"><img src="img/instagram.png" alt="Instagram">
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/instagram/fjl-bazar-gastron%C3%B3mico/" class="card">
+            <div class="title">
+              <p>Nuestro LinkedIn</p>
+              <p>fjl-bazar-gastronómico</p>
+            </div>
+            <div class="rrss"><img src="img/linkedin.png" alt="LinkedIn">
+            </div>
+          </a>
+          <a class="card" href="https://www.facebook.com/people/Fernando-Javier-Lassaque/pfbid037xDNhKYLxkZsRyYntgqYS11VKjd1zck1AakjB8CX41yBg1WwCM3pwo6JFZ3v8pYVl/">
+            <div class="title">
+              <p>Nuestro Facebook</p>
+              <p>FJL Bazar</p>
+            </div>
+            <div class="rrss"><img src="img/facebook.png" alt="Facebook"></div>
+          </a>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      <div class="icon"><img src="img/braiidev-github.png" alt="Github" data-tooltip="Github" /></div>
+      <div class="icon"><img src="img/braiidev-instagram.png" alt="Instagram" data-tooltip="Seguime"></div>
+      <div class="icon"><img src="img/braiidev-codepen.png" alt="Codepen" data-tooltip="Mis Trabajos"></div>
+    </footer>
+  </div>
+  <script>
+
+const navbar = document.querySelector("nav.navbar");
+navbar.addEventListener("click", (e) => {
+  if (e.target.nodeName === "A") {
+    const li = e.target.parentNode;
+    const liList = document.querySelectorAll(".navbar ul li");
+    liList.forEach((li) => li.classList.remove("select"));
+    li.classList.add("select");
+  }
+});
+function Select(id) {
+  const liList = document.querySelectorAll(".navbar ul li");
+  liList.forEach((li) => li.classList.remove("select"));
+  const li = document.querySelector(`[href="#${id}"]`);
+  li.parentNode.classList.add("select");
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+
+  sections.forEach((section) => {
+    section.addEventListener("wheel", function (event) {
+      event.preventDefault();
+      const direction = event.deltaY > 0 ? 1 : -1;
+      let nextSection;
+      sections.forEach((s, index) => {
+        if (s === section) {
+          nextSection = sections[index + direction];
+        }
+      });
+
+      if (nextSection) {
+        Select(nextSection.id);
+        nextSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
+  </script>
+</body>
+</html>
+
