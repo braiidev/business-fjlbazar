@@ -53,6 +53,9 @@ body {
   height: var(--size-box);
   position: fixed;
   z-index: 1000;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 .navbar ul {
@@ -103,7 +106,7 @@ section {
   background: var(--color-three);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   gap: var(--size-one);
 }
@@ -112,7 +115,7 @@ section {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url("https://fjlbazar.com/styles/img/bg.jpg");
   background-position: center center;
   background-size: cover;
@@ -126,7 +129,9 @@ section {
 }
 
 #Home .title img {
-  width: 150px;
+  width: calc(22vw - var(--size-box));
+  min-width: 300px;
+  max-width: 500px
 }
 
 #Home h1 {
@@ -155,17 +160,17 @@ section {
   position: absolute;
   width: var(--size-box);
   animation: DOWN 2s infinite;
-  bottom: 1em;
+  bottom: 3vh;
 }
 
 @keyframes DOWN {
   from,
   to {
-    bottom: 1em;
+  bottom: 3vh;
   }
 
   35% {
-    bottom: 0;
+  bottom: 1vh;
   }
 }
 
@@ -355,7 +360,24 @@ strong {
 #Contact .card:hover .title p {
   height: var(--size-one);
 }
-
+#Contact .card:hover .rrss img{
+  filter: contrast(40%) sepia(1) hue-rotate(var(--degrees)) saturate(1000%) drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 10px #555);
+}
+.rrss .instagram{
+  --degrees: 260deg !important;
+}
+.rrss .whatsapp{
+  --degrees: 100deg !important;
+}
+.rrss .linkedin, .rrss .facebook{
+  --degrees: 190deg !important;
+}
+.rrss .email{
+  --degrees: 350deg !important;
+}
+.rrss .tel{
+  --degrees: 130deg !important;
+}
 #Contact .card .title {
   width: 100%;
   height: 0;
@@ -375,9 +397,11 @@ strong {
 }
 
 #Contact .card .rrss img {
+  --degrees: 0deg;
   width: calc(var(--size-box) * 0.5);
   position: relative;
   filter: invert(1);
+  transition: all .5s ease;
 }
 
 /* Footer */
